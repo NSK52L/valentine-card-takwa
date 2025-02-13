@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="card">
+        <center><h1> 🌹 Valentine's Day Card🌹 </h1></center>
+        <div class="heart" id="heart1">
+            <div id="half1">
+                <div id="circle"></div>
+                <div id="rec"></div>
+            </div>
+            <div id="half2">
+                <div id="circle"></div>
+                <div id="rec"></div>
+            </div>
+        </div>
+        <div id="message">
+            <h2>Happy Valentine's Day!</h2>
+            <h3 id="name">Takwa </h3>
+        </div>
+        <div class="heart" id="heart2">
+            <div id="half1">
+                <div id="circle"></div>
+                <div id="rec"></div>
+            </div>
+            <div id="half2">
+                <div id="circle"></div>
+                <div id="rec"></div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="openBtn">Open Card</button>
+            <button id="closeBtn">Close Card</button>
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById('openBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const heart1 = document.getElementById('heart1');
+        const heart2 = document.getElementById('heart2');
+
+        openBtn.addEventListener('click', () => {
+            heart1.style.animation = 'openLeft 2s ease-in-out forwards';
+            heart2.style.animation = 'openRight 2s ease-in-out forwards';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            heart1.style.animation = 'closeLeft 2s ease-in-out forwards';
+            heart2.style.animation = 'closeRight 2s ease-in-out forwards';
+        });
+    </script>
+</body>
+</html>
